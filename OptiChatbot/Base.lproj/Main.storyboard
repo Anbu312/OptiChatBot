@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hIO-At-w0q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xcH-M9-1Dq">
+            <objects>
+                <navigationController id="hIO-At-w0q" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qff-ej-i02">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PR6-iC-apF" kind="relationship" relationship="rootViewController" id="WGY-KZ-uIk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULB-9l-HZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-408" y="100"/>
+        </scene>
+        <!--OptiChatBot-->
+        <scene sceneID="ckH-Qa-OzE">
+            <objects>
+                <viewController id="PR6-iC-apF" customClass="ViewController" customModule="Chip__Hotel_Booking_Chatbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kHC-cU-oir">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message Chat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7u5-5N-nSl">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="send" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat is a hotel booking chatbot. Just begin by saying &quot;Hi!&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rh3-97-n2v">
+                                <rect key="frame" x="16" y="64" width="343" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="xcO-Da-RPc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blE-tK-Sdc">
+                                <rect key="frame" x="75" y="356" width="225" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Message to Chat">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Avenir-Book"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="sendQuery:" destination="PR6-iC-apF" eventType="touchUpInside" id="zsJ-bl-qnc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7u5-5N-nSl" firstAttribute="centerY" secondItem="kHC-cU-oir" secondAttribute="centerY" id="79Z-Bq-hX8"/>
+                            <constraint firstItem="blE-tK-Sdc" firstAttribute="leading" secondItem="pBc-0x-JeU" secondAttribute="leading" constant="75" id="7e5-se-8qF"/>
+                            <constraint firstItem="pBc-0x-JeU" firstAttribute="trailing" secondItem="7u5-5N-nSl" secondAttribute="trailing" constant="16" id="D4y-4t-ZNm"/>
+                            <constraint firstItem="rh3-97-n2v" firstAttribute="centerX" secondItem="kHC-cU-oir" secondAttribute="centerX" id="HdW-Bj-7xx"/>
+                            <constraint firstItem="blE-tK-Sdc" firstAttribute="centerX" secondItem="kHC-cU-oir" secondAttribute="centerX" id="JeY-Nu-J2x"/>
+                            <constraint firstItem="blE-tK-Sdc" firstAttribute="top" secondItem="7u5-5N-nSl" secondAttribute="bottom" constant="8" id="OeN-lx-Xfx"/>
+                            <constraint firstItem="7u5-5N-nSl" firstAttribute="leading" secondItem="pBc-0x-JeU" secondAttribute="leading" constant="16" id="Sgx-WQ-sRv"/>
+                            <constraint firstItem="rh3-97-n2v" firstAttribute="top" secondItem="pBc-0x-JeU" secondAttribute="top" id="YoA-mB-xhx"/>
+                            <constraint firstItem="7u5-5N-nSl" firstAttribute="centerX" secondItem="kHC-cU-oir" secondAttribute="centerX" id="a2e-nE-RRQ"/>
+                            <constraint firstItem="rh3-97-n2v" firstAttribute="leading" secondItem="pBc-0x-JeU" secondAttribute="leading" constant="16" id="cPG-lu-ID2"/>
+                            <constraint firstItem="pBc-0x-JeU" firstAttribute="trailing" secondItem="rh3-97-n2v" secondAttribute="trailing" constant="16" id="eau-jV-Pl5"/>
+                            <constraint firstItem="pBc-0x-JeU" firstAttribute="trailing" secondItem="blE-tK-Sdc" secondAttribute="trailing" constant="75" id="gU8-zN-dyF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pBc-0x-JeU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="OptiChatBot" id="HZh-Zb-U0w"/>
+                    <connections>
+                        <outlet property="chatResponse" destination="rh3-97-n2v" id="5Sg-bT-Yon"/>
+                        <outlet property="messageTextField" destination="7u5-5N-nSl" id="Bt6-GY-Mg8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGL-HQ-owb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="99"/>
+        </scene>
+    </scenes>
+</document>

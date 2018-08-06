@@ -1,0 +1,6 @@
+framework module Pods_OptiChatbot {
+  umbrella header "Pods-OptiChatbot-umbrella.h"
+
+  export *
+  module * { export * }
+}
